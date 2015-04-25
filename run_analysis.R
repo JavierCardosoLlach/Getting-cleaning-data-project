@@ -1,3 +1,6 @@
+
+## Code used to perform the analysis on the Samsung Galaxy S accelerometers data
+
 ## Download & unzip the files
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileUrl,destfile="./SamsungGSData.zip",method="curl")
@@ -49,12 +52,14 @@ mergedData3<-merge(activitylabels,mergedData2,by.x ="V1",by.y="V1")
 ## Name each variable with the same names from the features.txt file
 names(mergedData3)<- c("activityid","activity","subject",as.vector(features$V2[mean_measurements]),as.vector(features$V2[std_measurements]),as.vector(features$V2[meanFreq_measurements]),as.vector(features$V2[Mean_measurements]))
 
- #5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+#5. From the data set in step 4, creates a second, independent tidy data set with the average of 
+# each variable for each activity and each subject.
 library(dplyr)
-groupedData=group_by(mergedData3,subject,activity,activityid)
-tidydataset<-summarise_each(tidydataset,funs(mean))
-tidydataset<-arrange(tidydataset,subject,activityid)
+groupedData=group_by(mergedData3,subject,activityid,activity)
+tidydataset<-summarise_each(groupedData,funs(mean))
 
-# Please upload the tidy data set created in step 5 of the instructions. Please upload your data set as a txt file created with write.table() using row.name=FALSE (do not cut and paste a dataset directly into the text box, as this may cause errors saving your submission).
+# Please upload the tidy data set created in step 5 of the instructions. Please upload your data set as a txt file 
+# created with write.table() using row.name=FALSE 
 write.table(tidydataset,"tidydataset.txt",row.names=FALSE)
+    
       
