@@ -1,6 +1,8 @@
 ## Getting and cleaning data: Project
 
-The run_analysis.R script enclosed in this repository processes the Galaxy Smartphone dataset referenced in the Acknowledgements section. The script follows the same order outlined in the project description:
+The run_analysis.R script enclosed in this repository processes the Galaxy Smartphone dataset referenced in the Acknowledgements section. 
+
+The script follows the same order outlined in the project description:
 
 #####0. Downloaded and unzipped the files 
 
