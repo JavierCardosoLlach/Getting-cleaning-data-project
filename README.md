@@ -5,14 +5,19 @@ The run_analysis.R script enclosed in this repository processes the Galaxy Smart
 #####0. Downloaded and unzipped the files 
 
 #####1. Merges the training and the test sets to create one data set:
-The training and the test sites have the same configuration: 3 files, one file with the measurements (named "X"), one file with the subject ID (an integer from 1 to 30) and one file with the activity info (an integer from 1 to 6). 
+The training and the test dataset have the same configuration. There are three files in each directory:
+- measurements: 561 float variables
+- subject ID: single column, an integer from 1 to 30
+- activity info: single column an integer from 1 to 6
 
 Since both the training and test sites have the same variables, the script appends the "train" set to the "test" set to each one of the 3 datasets described above. After that, the 3 dataframes are combined by adding the subject and activity info as new columns to the measurement data. The resulting dataframe is named mergedData.
 
 #####2. Extracts only the measurements on the mean and standard deviation for each measurement:
-Using the features.txt file from the dataset, identified all the measurements that correspond to either mean or standard deviation from the data and subset the relevant columns into a new dataframe named mergedData2.
+Using the features.txt file from the dataset, the script identifies  all the measurements that correspond to either mean or standard deviation from the data and subset the relevant columns into a new dataframe named mergedData2. 
 
-#####3. Uses descriptive activity names to name the activities in the data set
+This is done by looking for the strings "mean()", "std()","meanFreq", and "Mean" in the features dataframe. According to the features_info.rxt file, these variables correspond to the mean or standard deviation for each measurement.
+
+#####3. Uses descriptive activity names to name the activities in the data set:
 The MergedData2 dataframe identifies the activity with an integer from 1 to 6. The activity_labels.txt file contains descriptive activity names for them. The scripts merges the activity labels to MergedData2 based on the activity id (the integer from 1 to 6). The new dataframe is named mergedData3. 
 
 #####4. Appropriately labels the data set with descriptive variable names.
