@@ -1,6 +1,6 @@
-The features selected for this data set presented in this project is the average of a subset of variables from the Galaxy Smartphone measurements referenced in the README.md file in this repository. 
+#####The features selected for this data set presented in this project is the average of a subset of variables from the Galaxy Smartphone measurements referenced in the README.md file in this repository.
 
-This is the approach followed for the naming convention for the measurements:
+The data presents measurements from  30 subject tests performing 6 different activities. The type of measurements performed and the naming convention are as follows:
 
 There are 2 types of time domain measurements (indicated by the letter t at the beginning of the variable name).
 
@@ -10,16 +10,15 @@ There are 2 types of time domain measurements (indicated by the letter t at the 
 
 2. Gyroscope (Gyro)
 
-For both Accelerometer and Gyroscope measurements, Jerk (Jerk) signals are derived.
-All the measurements above are in 3 axis: X, Y or Z as indicated by the last letter in the variable.
-For each one of the variables above, the magnitude (Mag) was calculated
+- For both Accelerometer and Gyroscope measurements, Jerk (Jerk) signals are derived.
+- All the measurements above are in 3 axis: X, Y or Z as indicated by the last letter in the variable.
+- For each one of the variables above, the magnitude (Mag) was calculated.
+- In addition, there are measurements in the frequency domain for 7 of the measurements above. (indicated by the letter f at the beginning of the variable name).
+- Finally, there are additional vectors that are average signals in a window sample. They were included in this project and start with "angle".
 
-In addition, there are measurements in the frequency domain for 7 of the measurements above. (indicated by the letter f at the beginning of the variable name).
-
-All these variables have both mean and standard deviation form the original dataset. Finally, there are additional vectors that are average signals in a window sample. They were included in this project. 
- All of them were selected for this project.
+Each one of these variables have both mean and standard deviation in the original data set and were used to produce the tidy dataset containig the mean for each one of them.
  
- #####This is the list:
+#####This is the list:
 
 - subject: an integrer from 1 to 30. Correspoding to the 30 subject tests in  the dataset.
 
