@@ -1,4 +1,4 @@
-#####The features selected for this data set presented in this project is the average of a subset of variables from the Galaxy Smartphone measurements referenced in the README.md file in this repository.
+#####The features selected for this data set presented in this project are the average of a subset of variables from the Galaxy Smartphone measurements referenced in the README.md file in this repository.
 
 The data presents measurements from  30 subject tests performing 6 different activities. The type of measurements performed and the naming convention are as follows:
 
@@ -16,7 +16,7 @@ There are 2 types of time domain measurements (indicated by the letter t at the 
 - In addition, there are measurements in the frequency domain for 7 of the measurements above. (indicated by the letter f at the beginning of the variable name).
 - Finally, there are additional vectors that are average signals in a window sample. They were included in this project and start with "angle".
 
-Each one of these variables have both mean and standard deviation in the original data set and were used to produce the tidy dataset containig the mean for each one of them.
+Each one of these variables are either the mean or standard deviation of a set of measurements as indicated by "mean" or "std" in the measurement name. The tidy dataset presented is the mean of each one of these variables.
  
 #####This is the list:
 
