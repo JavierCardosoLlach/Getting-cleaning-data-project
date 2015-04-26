@@ -20,7 +20,7 @@ Each one of these variables are either the mean or standard deviation of a set o
  
 #####This is the list:
 
-- subject: an integrer from 1 to 30. Correspoding to the 30 subject tests in  the dataset.
+- subject: an integer from 1 to 30. Corresponding to the 30 subject tests in  the dataset.
 
 - activityid: an integer from 1 to 6: Corresponding to each one of the activities described in "activity"
 
